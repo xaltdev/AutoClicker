@@ -26,7 +26,7 @@ Follow these steps to compile the Python script into a standalone Windows execut
     ```
 
 **3. Compile with PyInstaller:**
-    Navigate to the directory containing the Python script (e.g., `main.py` or `autoclicker.py`) and the icon file (e.g., `icon.ico`) in your terminal. Then, run the following command:
+    Navigate to the directory containing the Python script (e.g., 'main.py' or 'autoclicker.py') and the icon file (e.g., 'icon.ico') in your terminal. Then, run the following command:
 
     ```bash
     pyinstaller --name "AutoClicker" --onefile --windowed --icon="icon.ico" --hidden-import="pynput.keyboard._win32" --hidden-import="pynput.mouse._win32" --hidden-import="customtkinter" YOUR_PYTHON_SCRIPT_NAME.py
