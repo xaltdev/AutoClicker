@@ -1,4 +1,4 @@
-# Python AutoClicker 🖱️✨
+# AutoClicker 🖱️✨
 
 A feature-rich auto-clicker application built with Python, using **CustomTkinter** for a modern UI and **Pynput** for global input control. This repository contains the source code (`.py`) and an icon (`.ico`) for the application.
 
