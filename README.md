@@ -22,7 +22,7 @@ Follow these steps to compile the Python script into a standalone Windows execut
 **2. Install Dependencies:**
     Open your terminal or command prompt and install the required libraries:
 ```bash
-    pip install customtkinter pynput pyinstaller
+pip install customtkinter pynput pyinstaller
 ```
 
 **3. Compile with PyInstaller:**
