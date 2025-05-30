@@ -29,12 +29,8 @@ pip install customtkinter pynput pyinstaller
     Navigate to the directory containing the Python script (e.g., 'main.py' or 'autoclicker.py') and the icon file (e.g., 'icon.ico') in your terminal. Then, run the following command:
 
  ```bash
- pyinstaller --name "AutoClicker" --onefile --windowed --icon="icon.ico" --hidden-import="pynput.keyboard._win32" --hidden-import="pynput.mouse._win32" --hidden-import="customtkinter" YOUR_PYTHON_SCRIPT_NAME.py
+ pyinstaller --name "AutoClicker" --onefile --windowed --icon="icon.ico" --hidden-import="pynput.keyboard._win32" --hidden-import="pynput.mouse._win32" --hidden-import="customtkinter" autoclicker.py
  ```
-
- **Replace:**
- *   `"icon.ico"`: If your icon file has a different name, update it here. Ensure it's in the same directory or provide the correct path.
- *   `YOUR_PYTHON_SCRIPT_NAME.py`: With the actual name of the Python source file (e.g., `main.py`).
 
  **Explanation of flags:**
  *   `--name "AutoClicker"`: Name of the output executable.
