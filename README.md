@@ -1,80 +1,49 @@
-# AutoClicker 🖱️✨
+# Python AutoClicker 🖱️✨
 
-**AutoClicker** is a simple, fast, free, and open-source application designed to automate mouse clicks, saving you time and effort on repetitive tasks.
+A feature-rich auto-clicker application built with Python, using **CustomTkinter** for a modern UI and **Pynput** for global input control. This repository contains the source code (`.py`) and an icon (`.ico`) for the application.
 
-![AutoClicker Download Page Screenshot](placeholder-screenshot.png)
-*(Suggestion: Add a screenshot of your AutoClicker application in action or its download page here. Name it `placeholder-screenshot.png` or similar and update the path.)*
+## Features
 
-## Overview
+*   **Precise Click Interval:** Set hours, minutes, seconds, and milliseconds.
+*   **Click Options:** Choose Left, Right, or Middle mouse button; Single or Double click.
+*   **Repeat Modes:** Repeat a specific number of times or click continuously until stopped.
+*   **Cursor Positioning:** Click at the current cursor location or pick a specific X,Y coordinate on screen.
+*   **Customizable Hotkey:** Start/stop clicking with a global hotkey (default: F6), changeable within the app.
+*   **Modern UI:** Clean, dark-themed interface.
 
-Whether you're gaming, performing data entry, or testing software, AutoClicker provides a reliable way to simulate mouse clicks automatically. It's built to be lightweight, incredibly easy to use, and has minimal impact on your system's performance.
+## How to Compile (to .exe for Windows)
 
-## Key Features
+Follow these steps to compile the Python script into a standalone Windows executable:
 
-*   🌟 **Core Auto-Clicking:** Automates mouse clicks at your desired screen location.
-*   ⏱️ **Configurable Click Interval:** Precisely set the time delay (speed) between clicks to suit your needs.
-*   ⌨️ **Hotkey Control:** Easily start and stop the auto-clicking process using a configurable hotkey.
-*   🎨 **Simple & Intuitive Interface:** Designed for ease of use, making it accessible for everyone, even beginners.
-*   🚀 **Lightweight & Efficient:** Minimal resource consumption ensures smooth operation without slowing down your computer.
-*   💖 **Free & Open Source (FOSS):** AutoClicker is completely free to use, modify, and distribute. We believe in transparency and community collaboration.
-*   💻 **Windows Support:** Currently available for Windows 10 and later.
+**1. Prerequisites:**
+    *   Ensure you have Python installed (version 3.7+ recommended).
+    *   Make sure `pip` (Python package installer) is available.
 
-## Supported Platforms
+**2. Install Dependencies:**
+    Open your terminal or command prompt and install the required libraries:
+    ```bash
+    pip install customtkinter pynput pyinstaller
+    ```
 
-*   ✅ **Windows:** Actively supported (Windows 10+).
-*   ⏳ **macOS:** Planned for future release.
-*   ⏳ **Linux:** Planned for future release.
+**3. Compile with PyInstaller:**
+    Navigate to the directory containing the Python script (e.g., `main.py` or `autoclicker.py`) and the icon file (e.g., `icon.ico`) in your terminal. Then, run the following command:
 
-## Getting Started & Download
+    ```bash
+    pyinstaller --name "AutoClicker" --onefile --windowed --icon="icon.ico" --hidden-import="pynput.keyboard._win32" --hidden-import="pynput.mouse._win32" --hidden-import="customtkinter" YOUR_PYTHON_SCRIPT_NAME.py
+    ```
 
-You can download the latest version of AutoClicker for Windows directly from the **download page** included in this repository:
+    **Replace:**
+    *   `"icon.ico"`: If your icon file has a different name, update it here. Ensure it's in the same directory or provide the correct path.
+    *   `YOUR_PYTHON_SCRIPT_NAME.py`: With the actual name of the Python source file (e.g., `main.py`).
 
-1.  Open the `index.html` file in your web browser.
-2.  Select the desired version (currently v1.0.0).
-3.  Click the "Windows (.exe)" download button.
+    **Explanation of flags:**
+    *   `--name "AutoClicker"`: Name of the output executable.
+    *   `--onefile`: Creates a single executable file.
+    *   `--windowed`: Prevents a console window from appearing when the GUI runs.
+    *   `--icon="icon.ico"`: Sets the application icon.
+    *   `--hidden-import="..."`: These are crucial for PyInstaller to correctly bundle `pynput` and `customtkinter` functionalities for Windows.
 
-*(If you deploy this page, replace the instructions above with a direct link: [Download Latest Version Here](YOUR_LIVE_DOWNLOAD_PAGE_LINK))*
-
-## How to Use (Basic)
-
-1.  Download and run the `AutoClicker.exe` application.
-2.  Configure your desired click interval (time between clicks).
-3.  Set your preferred hotkey to start/stop clicking.
-4.  Position your mouse cursor where you want the clicks to occur.
-5.  Press the configured hotkey to start auto-clicking.
-6.  Press the hotkey again to stop.
-
-## System Requirements (Windows)
-
-*   **Operating System:** Windows 10 or later
-*   **RAM:** 128MB
-*   **Disk Space:** Approximately 14MB for the application
-
-## About This Repository
-
-This repository contains the source code for the **AutoClicker application**.
-
-It also includes:
-*   `index.html`: A modern, interactive download page (built with HTML, Tailwind CSS, and JavaScript) that provides information about AutoClicker, showcases its features, and offers download links for the compiled application.
-*   `icon/`: Assets like the application/page icon.
-*   `download/`: This is where the compiled `AutoClicker.exe` should be placed for the download page to function correctly. **(Important: Ensure your `.exe` is in this folder!)**
-
-## Contributing
-
-We welcome contributions to AutoClicker! Whether it's bug fixes, feature enhancements, or documentation improvements, please feel free to:
-
-1.  Fork the repository.
-2.  Create a new branch for your feature or fix.
-3.  Make your changes and commit them.
-4.  Submit a Pull Request with a clear description of your changes.
-
-You can also help by reporting bugs or suggesting new features through the [Issues](../../issues) tab. *(This link assumes your repo is on GitHub/GitLab etc.)*
-
-## License
-
-This project is licensed under the [YOUR_LICENSE_HERE]. See the `LICENSE` file for more details.
-*(Example: MIT License. You'll need to add a `LICENSE` file to your repository.)*
+**4. Find Your Executable:**
+    After PyInstaller finishes, you will find the `AutoClicker.exe` file inside a newly created `dist` folder.
 
 ---
-
-We hope AutoClicker helps simplify your tasks!
